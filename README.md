@@ -1,1 +1,1 @@
-Object-oriented programming by C++ methods
+Object-oriented programming by C++ methods.
