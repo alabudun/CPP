@@ -20,9 +20,9 @@ public:
 		*cell='a';
 	}
 
-int ÿh(){return h;}
-int ÿw(){return w;}
-char* ÿc(){return cell;}
+int gh(){return h;}
+int gw(){return w;}
+char* gc(){return cell;}
 
 	friend MATRIX operator+(MATRIX &m0, MATRIX &m1);
 	friend ostream &operator<<(ostream &s, MATRIX m);
@@ -40,24 +40,24 @@ virtual ~MATRIX(){delete []cell;}
 
 MATRIX operator+(MATRIX &m0, MATRIX &m1){
 	MATRIX tmp=m0;
-	if((m0.ÿh()!=m1.ÿh()) || (m0.ÿw()!=m1.ÿw()))
+	if((m0.gh()!=m1.gh()) || (m0.gw()!=m1.gw()))
 		return tmp;
 }
 
 ostream &operator<<(ostream &s, MATRIX m){
-	for(int i=0; i<m.ÿh(); i++, s<<endl){
-			for(int j=0; j<m.ÿw(); j++){
-				s<<'|'<<*(m.ÿc()+(m.ÿw()*i)+j)<<'|';
+	for(int i=0; i<m.gh(); i++, s<<endl){
+			for(int j=0; j<m.gw(); j++){
+				s<<'|'<<*(m.gc()+(m.gw()*i)+j)<<'|';
 			}
 		}
 	return s;
 }
 
 istream &operator>>(istream &s, MATRIX &m){
-	for(int i=0; i<m.ÿh(); i++){
-			for(int j=0; j<m.ÿw(); j++){
+	for(int i=0; i<m.gh(); i++){
+			for(int j=0; j<m.gw(); j++){
 				cout<<'['<<i+1<<"]["<<j+1<<"]:";
-				s>>*(m.ÿc()+(m.ÿw()*i)+j);
+				s>>*(m.gc()+(m.gw()*i)+j);
 			}
 		}
 	return s;
