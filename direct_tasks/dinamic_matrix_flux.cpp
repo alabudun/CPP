@@ -102,8 +102,7 @@ public:
 	sqMATRIX(int dimension):MATRIX(dimension, dimension){}
 };
 
-void main(/*BEGIN*/)
-{
+void main(/*BEGIN*/){
 	MATRIX m1(4,4);
 	MATRIX m2(2,2);
 	sqMATRIX m3(3);
@@ -112,6 +111,7 @@ void main(/*BEGIN*/)
 	cout<<m2;cout<<endl;
 	cout<<m3;cout<<endl;
 	cout<<m3[1]<<endl;
+	
   /*
     m1=m2;
 	cout<<m1;cout<<endl;
@@ -120,5 +120,6 @@ void main(/*BEGIN*/)
 	cout<<m1;cout<<endl;
 	cout<<m2;cout<<endl;
   */
+  
 	system("pause");
 }
