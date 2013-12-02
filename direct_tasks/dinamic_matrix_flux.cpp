@@ -44,6 +44,10 @@ void fill(int x){
 		}
 		return *this;
 	}
+
+	int operator[](int index);
+	double operator[](double index);
+
 	friend MATRIX operator+(MATRIX m0, MATRIX m1);
 	friend ostream &operator<<(ostream &s, MATRIX m);
 	friend istream &operator>>(istream &s, MATRIX &m);
@@ -57,6 +61,10 @@ void fill(int x){
 
 //virtual ~MATRIX(){cout<<"\n<LAUNCHING DESTRUCTOR!>\n";delete []cell;}
 };
+
+int MATRIX::operator[](int index){
+	return *(cell+index);
+}
 
 MATRIX operator+(MATRIX m0, MATRIX m1){
 	MATRIX temp(m0.h,m0.w);
@@ -103,6 +111,7 @@ void main(/*BEGIN*/)
 	cout<<m1;cout<<endl;
 	cout<<m2;cout<<endl;
 	cout<<m3;cout<<endl;
+	cout<<m3[1]<<endl;
   /*
     m1=m2;
 	cout<<m1;cout<<endl;
