@@ -73,7 +73,7 @@ MATRIX operator+(MATRIX m0, MATRIX m1){
 		else{
 			for(int i=0; i<m0.h; i++, cout<<endl){
 				for(int j=0; j<m0.w; j++){
-					*(temp.cell+(temp.w*i)+j)=(*(m0.cell+(m0.w*1)+j))+(*(m1.cell+(m1.w*1)+j));
+					*(temp.cell+(temp.w*i)+j)=(*(m0.cell+(m0.w*i)+j))+(*(m1.cell+(m1.w*i)+j));
 				}
 			}
 			return temp;
